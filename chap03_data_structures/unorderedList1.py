@@ -23,12 +23,17 @@ class UnorderedList:
     def isEmpty(self):
         return self.head == None
 
+#     def add(self,item):
+#         temp = Node(item)
+#         temp.setNext(self.head)
+#         if self.tail == None:
+#             self.tail = temp
+        
+#         self.head = temp
+        
     def add(self,item):
         temp = Node(item)
-        temp.setNext(self.head)
-        if self.tail == None:
-            self.tail = temp
-        
+        temp.setNext(self.head)        
         self.head = temp
         
 
@@ -79,7 +84,7 @@ class UnorderedList:
 
         previous.setNext(temp)
         
-     def __repr__(self):
+    def __repr__(self):
         start = " ["
         end = "]"
         cur = self.head
@@ -87,7 +92,7 @@ class UnorderedList:
         while cur != None:
             result += str(cur.getData())+","
             cur = cur.getNext()
-            
+
         result += end
         return result
         
