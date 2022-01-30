@@ -78,6 +78,20 @@ class UnorderedList:
             current = current.getNext()
 
         previous.setNext(temp)
+        
+     def __repr__(self):
+        start = " ["
+        end = "]"
+        cur = self.head
+        result = start
+        while cur != None:
+            result += str(cur.getData())+","
+            cur = cur.getNext()
+            
+        result += end
+        return result
+        
+        
                 
 
 
@@ -89,6 +103,8 @@ mylist.add(17)
 mylist.add(93)
 mylist.add(26)
 mylist.add(54)
+
+print(mylist)
 
 print(mylist.size())
 print(mylist.search(93))
